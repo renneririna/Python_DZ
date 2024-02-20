@@ -29,14 +29,14 @@ stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 
 stroka = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 vowels = ['а', 'е', 'ё', 'и', 'й', 'о', 'у', 'ы', 'э', 'ю', 'я']
-words_slogs = []
-for word in stroka:
+words_slogs = [] # список, где будем хранить кол-во слогов в каждом слове соответственно
+for word in stroka: # проходимся по списку
     count = 0
-    for i in word:
-        if i in vowels:
-            count += 1
+    for i in word: # проходимся по слову
+        if i in vowels: # и проверяем, если символ внутри слова есть в гласных
+            count += 1 # мы будем его считать vowels
     words_slogs.append(count)
-if len(words_slogs) == words_slogs.count(words_slogs[0]):
+if len(words_slogs) == words_slogs.count(words_slogs[0]): # если длина списка со слогами = кол-ву, .count() - метод позволяет считать элементы в списке, words_slogs[0] - кол-во 1-ого элемента в списке 
     print("Парам пам-пам")
 else:
     print("Пам парам")
